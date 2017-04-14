@@ -80,3 +80,38 @@ Ghost Material is widely motivated by [Materialize](http://materializecss.com/) 
 
 Creative Commons BY-SA 4.0 
 http://creativecommons.org/licenses/by-sa/4.0/
+
+## Tasks list
+* `babel` - Run [Babel](https://babeljs.io/), a compiler for writing next generation JavaScript.
+  * `--theme name` - Process single theme.
+  * `--prod` - Production output - minifies and uglyfy code.
+* `browser-sync` - Run [browserSync](https://www.browsersync.io/).
+* `clean` - Removes `/pub/static` directory content.
+* `csslint` - Run [stylelint](https://github.com/stylelint/stylelint) based tests.
+  * `--theme name` - Process single theme.
+  * `--ci` - Enable throwing errors. Useful in CI/CD pipelines.
+* `default` - type `gulp` to see this readme in console.
+* `deploy` - Symlink or copy all static assets to `pub/static`. Runs `clean` and `inheritance` tasks.
+  * `--theme name` - Specify theme to deploy.
+  * `--prod` - Copy files instead of making symlinks.
+* `dev` - Runs `browser-sync`, `inheritance` and `watch`  tasks.
+  * `--theme name` - Process single theme.
+  * `--disableLinting` - Disable SASS and CSS linting.
+  * `--disableMaps` - Toggles source maps generation.
+* `eslint` - Watch and run [eslint](https://github.com/adametry/gulp-eslint) on specified JS file.
+  * `--file fileName` - You have to specify what file you want to lint, fileName without .js.
+* `inheritance` - Create necessary symlinks to resolve theme styles inheritance and make the base for styles processing. You have to run in before styles compilation and after adding new files.
+* `sasslint` - Run [sass-lint](https://github.com/sasstools/sass-lint) based tests.
+  * `--theme name` - Process single theme.
+  * `--ci` - Enable throwing errors. Useful in CI/CD pipelines.
+* `setup` - Creates a convenient symlink from `/tools` to `/vendor/snowdog/frontools` and copies all sample files if no configuration exists.
+  * `--symlink name` - If you don't want to use `tools` as the symlink you can specify another name.
+* `styles` - Use this task to manually trigger styles processing pipeline.
+  * `--theme name` - Process single theme.
+  * `--disableMaps` - Toggles source maps generation.
+  * `--prod` - Production output - minifies styles and add `.min` sufix.
+  * `--ci` - Enable throwing errors. Useful in CI/CD pipelines.
+* `watch` - Watch for style changes and run processing tasks.
+  * `--theme name` - Process single theme.
+  * `--disableLinting` - Disable SASS and CSS linting.
+  * `--disableMaps` - Enable inline source maps generation.
