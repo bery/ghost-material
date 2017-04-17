@@ -34,6 +34,7 @@
     "js-yaml": "~3.8.2",
     "marked": "~0.3.6",
     "marked-terminal": "~2.0.0",
+    "materialize-css": "^0.98.1",
     "merge-stream": "~1.0.1",
     "postcss-reporter": "~3.0.0",
     "run-sequence": "~1.2.2",
@@ -41,12 +42,9 @@
     "stylelint-config-standard": "~16.0.0"
   },
   "scripts": {
-    "test": "./node_modules/eslint/bin/eslint.js *.js helper/*.js task/*.js"
-  },
-  "devDependencies": {},
-  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bery/ghost-material.git"
